@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 
 const PostForm = ({create}) => {
 
-    const [post, setPost] = useState({title: '', content:''})
+    const [post, setPost] = useState({title: '', body:''})
 
     const addNewPost = (e) => {
         e.preventDefault();
@@ -10,17 +10,14 @@ const PostForm = ({create}) => {
             ...post, id: Date.now()
         }
 
-        // console.log(newPost);
         create(newPost);
-        setPost({title: '', content:''});
+        setPost({title: '', body:''});
 
     }
 
 
     return (
-        <div className="row">
-            <div className="col-md-1"></div>
-            <div className="col-md-10">
+
                 <form className="form-submit">
                     <div>
                         <input type="text"
@@ -33,17 +30,15 @@ const PostForm = ({create}) => {
                     <div>
                          <textarea className="form-control"
                                    placeholder="Post content"
-                                   value={post.content}
-                                   onChange={e => setPost({...post, content: e.target.value})}
+                                   value={post.body}
+                                   onChange={e => setPost({...post, body: e.target.value})}
                          />
                     </div>
                     <div className="button-submit">
                         <button onClick={addNewPost}  className="btn btn-success">Submit</button>
                     </div>
                 </form>
-            </div>
-            <div className="col-md-1"></div>
-        </div>
+
     );
 };
 

@@ -13,7 +13,7 @@
   text-align: right;
 }
 .form-submit{
-  margin: 20px 0 20px 0;
+  margin: 0 0 10px 0;
 }
 .form-submit div{
   padding: 10px 0 10px 0;
@@ -29,4 +29,18 @@ h4{
 }
 .sort-block{
   padding-bottom: 20px;
+}
+.button-add-post{
+  padding: 20px 0 30px 0;
+}
+.button-add-post button{
+  width: 100%;
+}
+.my-pagination{
+  text-align: center;
+  padding: 20px 0 30px 0;
+}
+.my-pagination button{
+  padding: 5px 10px 5px 10px;
+  margin: 0 5px 0 0;
 }
